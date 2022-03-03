@@ -1,0 +1,45 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+
+    <style>
+        html{
+            height: 100vh;
+            width: 100vw;
+        }
+        body{
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .leetmail{
+            font-family: 'Inter', sans-serif;
+            font-weight:900;
+            text-align:center;
+            font-size: 48px;
+        }
+        .container{
+            text-align: center;
+            margin-top: 30vh;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="leetmail">LeetMail</h1>
+        <h1><%= message %></h1>
+    </div>
+
+
+</body>
+</html>

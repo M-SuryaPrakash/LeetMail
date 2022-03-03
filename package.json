@@ -1,0 +1,22 @@
+{
+  "name": "leetcode-daily-challenge",
+  "version": "1.0.0",
+  "description": "Leetcode Daily Challenge Remainder.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cron": "^1.8.2",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "md5": "^2.3.0",
+    "mongoose": "^6.0.12",
+    "nodemailer": "^6.7.2"
+  }
+}

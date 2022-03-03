@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leet Mail</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  </head>
+<body>
+    <style>
+body{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  
+}
+.newsletter-wrapper{
+    padding: 10px;
+}
+.newsletter-wrapper h1{
+  font-family: 'Inter', sans-serif;
+  font-weight:900;
+  text-align:center;
+  font-size: 48px;
+}
+.newsletter-wrapper h2{
+  font-size:20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-align:center;
+}
+
+form{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  box-shadow:2px 5px 10px rgba(0,0,0,0.4);
+  border-radius:6px;
+  overflow: hidden;
+  margin-top:50px;
+}
+input{
+  padding:10px;
+  margin:5px 0 5px 5px;
+  outline:none;
+  border:none;
+  background:rgba(255,255,255,0.3);
+  color: #ffffff;
+  border-radius: 2px;
+  min-width: 100px;
+  flex:1;
+  font-size:15px;
+  height:30px;
+}
+button{
+  border:none;
+  background:transparent;
+  color:#ffffff;
+  font-size: 18px;
+  cursor:pointer;
+  width:30%;
+  height:50px;
+}
+button:hover{
+  font-size: 20px;
+}
+p{
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+</style>
+
+<div class="container">
+    <div class="newsletter-wrapper">
+        <h1>Leet <span>Mail</span></h1>
+        <h2>Subscribe to get daily remainder for the leetcode daily challenge through email</h2>
+        <form id="newsletter-form">
+            <input id="email" type="email" name="email" placeholder="Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p id="message"></p>
+    </div>
+</div>
+
+<script>
+
+$( "form" ).submit(function(e) {
+  e.preventDefault();
+  const url = window.location.protocol+"//"+window.location.host+"/subscribe";
+  $.post(url, $("form").serialize(),
+    function (data, textStatus, jqXHR) {
+      console.log(data);
+      $("#message").text(data);
+    },
+    "text"
+  );
+});
+
+
+
+</script>
+</body>
+</html>
